@@ -21,7 +21,7 @@ apt update
 
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-usermod -aG docker $USER
+usermod -aG docker $USERNAME
 
 echo "Docker installed!"
 
@@ -58,3 +58,6 @@ nodes:
 EOF
 
 echo "Kind installed!"
+
+# To create a cluster run the below command:
+# kind create cluster --name k8s-playground --config kind-config.yaml
